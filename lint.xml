@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="NewApi">
+        <ignore path="src/edu/virginia/cs2110/ntg9vz/androidtest/MainMenu.java" />
+        <ignore path="src/edu/virginia/cs2110/ntg9vz/androidtest/SplashScreen.java" />
+    </issue>
+</lint>

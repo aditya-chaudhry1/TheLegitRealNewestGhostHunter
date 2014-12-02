@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android Test</string>
+    <string name="title_activity_splash_screen">Ghost Hunter</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="ghost_hunter_splash">GHOST HUNTER</string>
+    <string name="developer_splash_text">©&#91;team name&#93;</string>
+    <string name="title_activity_main_menu">Main Menu</string>
+    <string name="play_button">PLAY</string>
+    <string name="options_button">OPTIONS</string>
+    <string name="high_scores_button">HIGH SCORES</string>
+    <string name="splash_img_desc">Splash image</string>
+
+</resources>

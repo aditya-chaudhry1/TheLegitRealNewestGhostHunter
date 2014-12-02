@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    android:theme="@style/NoActionBar"
+    android:gravity="center"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play_button"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:onClick="onPlayClick"
+        android:clickable="true"
+        android:textColor="#FF9900"
+        android:gravity="center_vertical" />
+    
+    <TextView
+        android:id="@+id/options_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/options_button"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:onClick="onOptionsClick"
+        android:clickable="true"
+        android:textColor="#FF9900"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/high_scores_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:onClick="onScoresClick"
+        android:text="@string/high_scores_button"
+        android:textColor="#FF9900"
+        android:textSize="32sp" />
+
+</LinearLayout>

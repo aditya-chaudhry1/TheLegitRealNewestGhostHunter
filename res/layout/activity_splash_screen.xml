@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   	android:theme="@style/NoActionBar"
+    android:background="#000000"
+    tools:context="${relativePackage}.${activityClass}"  >
+    
+    <ImageView
+        android:id="@+id/splash_img"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/splash_img_desc"
+        android:scaleType="fitCenter"
+        android:src="@drawable/splashscreenwide9" />
+
+    <!-- 
+    <TextView
+        android:id="@+id/splash_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text="@string/ghost_hunter_splash"
+        android:textColor="#FF9900"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/developer_splash_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:text="@string/developer_splash_text"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF">
+    </TextView>
+    -->
+    
+    <!--
+    <transitionSet 
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:transitionOrdering="sequential" >
+
+		<fade
+			android:duration="2000"
+			android:fadingMode="fade_out">
+		</fade> 
+		    
+	</transitionSet>
+	-->
+</RelativeLayout>
