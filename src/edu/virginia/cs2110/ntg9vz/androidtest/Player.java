@@ -10,7 +10,7 @@ public class Player extends Character
 	{
 		super(context);
 		maxHealth = health;
-		remainingHealth = 60;
+		remainingHealth = maxHealth;
 		xCoordinate = startX;
 		yCoordinate = startY;
 		velocity = startVelocity;

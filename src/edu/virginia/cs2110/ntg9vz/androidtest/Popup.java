@@ -90,7 +90,7 @@ public class Popup extends Activity {
 		this.setRequestedOrientation(
 				ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-		mainCharacter = new Player(100, 5, 5, 1, this); //ID = 2
+		mainCharacter = new Player(6, 5, 5, 1, this); //ID = 2
 		mainCharacter.setId(2);
 		
 		
@@ -462,8 +462,10 @@ public class Popup extends Activity {
 				damageIncrease = level/5 * 1;
 			
 			Ghost currentGhost = new Ghost(7 ,startX , startY, 1, 1 + damageIncrease,  this);
+			
 			Log.d("instantiateGhosts", "22");
 			Log.d("instantiateGhosts", "damage increase = " + damageIncrease);
+			Log.d("instantiateGhosts", "damage  = " + 1 + damageIncrease );
 
 			
 			
@@ -603,6 +605,8 @@ public class Popup extends Activity {
 	
 	public void moveMainPlayer(int direction)
 	{
+		Log.d("MainCharacter Health", mainCharacter.getHealth() + "");
+
 		mainCharacter.changeDirection(direction);
 		mainCharacter.move();
 		Log.d("2110", "x: " + mainCharacter.getxCoordinate() + "\t y: " + mainCharacter.getyCoordinate());
@@ -709,7 +713,7 @@ public class Popup extends Activity {
 				this.publishProgress(params);	//calls onProgressUpdate
 				//					Log.i(i + "From doInBackroung", "Yo this is the worker thread and i'm doing stuff in the background right now");
 				try {
-					Thread.sleep(delay); // 1 sec		// sleep (wait) one second
+					Thread.sleep(2000); // 1 sec		// sleep (wait) one second
 				} catch (InterruptedException e) {
 
 				}
@@ -807,6 +811,7 @@ public class Popup extends Activity {
 					
 					if(currentBullet.getxCoordinate() == xCoordinateOfThisGhost && currentBullet.getyCoordinate() == yCoordinateOfThisGhost)
 					{
+						Log.d("YoYOYO", "We SHould be killing some ghotsts right now");
 						currentGhost.changeHealth(currentBullet.getDamage());
 						
 						currentBullet.setVisible(false);
@@ -814,6 +819,8 @@ public class Popup extends Activity {
 						
 						
 					}
+					
+					
 				}
 				
 				if(currentGhost.getHealth() <= 0)
@@ -860,6 +867,9 @@ public class Popup extends Activity {
 				else
 				{
 					//Log.d("2110", "Ghost: " + xCoordinateOfThisGhost + " , " + yCoordinateOfThisGhost);
+					CharSequence c = "MainCharacter health " +mainCharacter.getHealth() ;
+					Toast toast50 = Toast.makeText(thisActivity, c , Toast.LENGTH_LONG);
+					toast50.show();
 					mainCharacter.changeHealth(currentGhost.getDamage() * -1);
 					Log.d("MainCharacter Health", mainCharacter.getHealth() + "");
 					LinearLayout healthBarLayout = (LinearLayout) findViewById(100);
@@ -892,7 +902,10 @@ public class Popup extends Activity {
 				    else 
 				    {
 						healthBar.setImageResource(R.drawable.h0);
+						
+						mainCharacter.changeHealth(6);
 						thisActivity.finish();
+						this.cancel(true);
 						CharSequence text100 = "Your score was" + ((Integer) mainCharacter.kills).toString();
 
 						Toast toast100 = Toast.makeText(thisActivity, text100 , Toast.LENGTH_LONG);

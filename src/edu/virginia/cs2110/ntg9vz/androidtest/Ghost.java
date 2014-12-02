@@ -1,6 +1,7 @@
 package edu.virginia.cs2110.ntg9vz.androidtest;
 
 import android.content.Context;
+import android.util.Log;
 
 public class Ghost extends Character 
 {
@@ -33,6 +34,7 @@ public class Ghost extends Character
 
 		
 		this.damage = damage;
+		Log.d("THis Ghost has a damage of", "" + this.damage);
 	}
 	
 	public void changeDirection(int newDirection)
